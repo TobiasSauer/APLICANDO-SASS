@@ -1,0 +1,51 @@
+header{
+    height: 15vh;
+    font-family: roboto, sans-serif;
+    font-weight: bold;
+    background-color: $color_page;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 0.3fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    div{
+        a{
+            color: $color_text;
+            text-decoration: none;
+            img{
+                height: 50px;
+                width: 50px;
+            }
+        }
+        a:hover{
+            color: $color_text_hover;
+        }
+        input{
+            height: 30px;
+            width: 250px;
+            font-size: 15px;
+            font-family: roboto, sans-serif;
+            font-weight: bold;
+            border: none;
+            border-radius: 1.5rem;
+        }
+    }
+    ul{
+        list-style: none;
+        display: inline-flex;
+        li{
+            margin: 1rem;
+            a{
+                color: $color_text;
+                text-decoration: none;
+            }
+            a:hover{
+                color: $color_text_hover;
+            }
+        }
+    }
+}
+.logo_total{
+    margin-left: 2rem;
+    display: inline-flex;
+    align-items: center;
+}

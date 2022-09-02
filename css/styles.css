@@ -1,0 +1,101 @@
+header {
+  height: 15vh;
+  font-family: roboto, sans-serif;
+  font-weight: bold;
+  background-color: #92257A;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 0.3fr;
+  grid-template-rows: 1fr;
+  align-items: center; }
+  header div a {
+    color: black;
+    text-decoration: none; }
+    header div a img {
+      height: 50px;
+      width: 50px; }
+  header div a:hover {
+    color: white; }
+  header div input {
+    height: 30px;
+    width: 250px;
+    font-size: 15px;
+    font-family: roboto, sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 1.5rem; }
+  header ul {
+    list-style: none;
+    display: inline-flex; }
+    header ul li {
+      margin: 1rem; }
+      header ul li a {
+        color: black;
+        text-decoration: none; }
+      header ul li a:hover {
+        color: white; }
+
+.logo_total {
+  margin-left: 2rem;
+  display: inline-flex;
+  align-items: center; }
+
+main {
+  background-color: #212120;
+  display: grid;
+  grid-template-columns: 2fr 0.4fr;
+  grid-template-rows: 1fr;
+  font-family: roboto, sans-serif;
+  font-weight: bold; }
+  main img {
+    height: 150px;
+    width: 150px; }
+  main ul li {
+    list-style: none; }
+    main ul li a {
+      text-decoration: none;
+      color: #92257A; }
+    main ul li a:hover {
+      color: white; }
+
+.main_contenido_juegos ul li {
+  margin: 2rem;
+  display: inline-flex; }
+  .main_contenido_juegos ul li div {
+    margin-left: 1rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around; }
+    .main_contenido_juegos ul li div p {
+      color: white; }
+
+.contenido_banner {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-around; }
+  .contenido_banner ul li {
+    margin-top: 3rem; }
+    .contenido_banner ul li h3 {
+      color: white; }
+
+footer {
+  height: 15vh;
+  background-color: #92257A;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: roboto, sans-serif;
+  font-weight: bold; }
+  footer img {
+    height: 50px;
+    width: 50px; }
+  footer div a {
+    color: black;
+    margin: 1.2rem;
+    text-decoration: none; }
+  footer div a:hover {
+    color: white; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }

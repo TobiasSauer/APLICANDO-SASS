@@ -1,0 +1,54 @@
+main{
+    background-color: $color_page_main;
+    display: grid;
+    grid-template-columns: 2fr 0.4fr;
+    grid-template-rows: 1fr;
+    font-family: roboto, sans-serif;
+    font-weight: bold;
+    img{
+        height: 150px;
+        width: 150px;
+    }
+    ul{
+        li{
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: $color_text_main;
+            }
+            a:hover{
+                color: $color_text_hover
+            }
+        }
+    }
+}
+.main_contenido_juegos{
+    ul{
+        li{
+            margin: 2rem;
+            display: inline-flex;
+            div{
+                margin-left: 1rem;
+                flex-direction: column;
+                display: flex;
+                justify-content: space-around;
+                p{
+                    color: $color_text_hover;
+                }
+            }
+        }
+    }
+}
+.contenido_banner{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-around;
+    ul{
+        li{
+            margin-top: 3rem;
+            h3{
+                color: $color_text_hover;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+footer{
+    height: 15vh;
+    background-color: $color_page;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: roboto, sans-serif;
+    font-weight: bold;
+    img{
+        height: 50px;
+        width: 50px;
+    }
+    div{
+        a{
+            color: $color_text;
+            margin: 1.2rem;
+            text-decoration: none;
+        }
+        a:hover{
+            color: $color_text_hover;
+        }
+    }
+}

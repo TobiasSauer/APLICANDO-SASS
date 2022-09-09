@@ -1,5 +1,5 @@
 main{
-    background-color: $color_page_main;
+    background-color: map-get($color_page , "negrito");
     display: grid;
     grid-template-columns: 2fr 0.4fr;
     grid-template-rows: 1fr;
@@ -14,10 +14,10 @@ main{
             list-style: none;
             a{
                 text-decoration: none;
-                color: $color_text_main;
+                color: map-get($color_text , "rosita_text");
             }
             a:hover{
-                color: $color_text_hover
+                color: map-get($color_text , "blanco_text");
             }
         }
     }
@@ -25,15 +25,16 @@ main{
 .main_contenido_juegos{
     ul{
         li{
-            margin: 2rem;
             display: inline-flex;
+            list-style: none;
+            margin: 2rem;
             div{
                 margin-left: 1rem;
                 flex-direction: column;
                 display: flex;
                 justify-content: space-around;
                 p{
-                    color: $color_text_hover;
+                    color: map-get($color_text , "blanco_text");
                 }
             }
         }
@@ -41,13 +42,12 @@ main{
 }
 .contenido_banner{
     margin-top: 4rem;
-    display: flex;
-    justify-content: space-around;
     ul{
         li{
+            @include lista_vertical;
             margin-top: 3rem;
             h3{
-                color: $color_text_hover;
+                color: map-get($color_text , "blanco_text");
             }
         }
     }

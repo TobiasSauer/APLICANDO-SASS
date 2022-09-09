@@ -1,6 +1,6 @@
 footer{
     height: 15vh;
-    background-color: $color_page;
+    background-color: map-get($color_page , "rosita");
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -12,12 +12,12 @@ footer{
     }
     div{
         a{
-            color: $color_text;
+            color: map-get($color_text, "negrito_text");
             margin: 1.2rem;
             text-decoration: none;
         }
         a:hover{
-            color: $color_text_hover;
+            color: map-get($color_text , "blanco_text");
         }
     }
 }

@@ -1,0 +1,13 @@
+@mixin reset { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin lista_horizontal {
+    list-style: none;
+    display: inline-flex;
+}
+@mixin lista_vertical {
+    display: flex;
+    justify-content: space-around;
+}

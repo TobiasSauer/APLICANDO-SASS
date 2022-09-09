@@ -2,14 +2,14 @@ header{
     height: 15vh;
     font-family: roboto, sans-serif;
     font-weight: bold;
-    background-color: $color_page;
+    background-color: map-get($color_page , "negrito" );
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr 0.3fr;
     grid-template-rows: 1fr;
     align-items: center;
     div{
         a{
-            color: $color_text;
+            color: map-get($color_text, "negrito_text");
             text-decoration: none;
             img{
                 height: 50px;
@@ -17,7 +17,7 @@ header{
             }
         }
         a:hover{
-            color: $color_text_hover;
+            color: map-get($color_text, "blanco_text");
         }
         input{
             height: 30px;
@@ -30,16 +30,15 @@ header{
         }
     }
     ul{
-        list-style: none;
-        display: inline-flex;
         li{
+            @include lista_horizontal;
             margin: 1rem;
             a{
-                color: $color_text;
+                color: map-get($color_text , "negrito_text" );
                 text-decoration: none;
             }
             a:hover{
-                color: $color_text_hover;
+                color: map-get($color_text , "blanco_text" );
             }
         }
     }

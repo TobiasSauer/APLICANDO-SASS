@@ -2,7 +2,7 @@ header{
     height: 15vh;
     font-family: roboto, sans-serif;
     font-weight: bold;
-    background-color: map-get($color_page , "negrito" );
+    background-color: map-get($color_page , "rosita" );
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr 0.3fr;
     grid-template-rows: 1fr;
@@ -19,20 +19,23 @@ header{
         a:hover{
             color: map-get($color_text, "blanco_text");
         }
-        input{
-            height: 30px;
-            width: 250px;
-            font-size: 15px;
-            font-family: roboto, sans-serif;
-            font-weight: bold;
-            border: none;
-            border-radius: 1.5rem;
-        }
+    }
+    .input_header{
+        background-color: map-get($color_page,"negrito_claro");
+        color: map-get($color_text,"blanco_text");
+        height: 30px;
+        width: 250px;
+        font-size: 15px;
+        font-family: roboto, sans-serif;
+        font-weight: bold;
+        border: none;
+        border-radius: 1.5rem
     }
     ul{
+        margin-right: 1rem;
         li{
             @include lista_horizontal;
-            margin: 1rem;
+            margin: 0.5rem;
             a{
                 color: map-get($color_text , "negrito_text" );
                 text-decoration: none;
@@ -47,4 +50,137 @@ header{
     margin-left: 2rem;
     display: inline-flex;
     align-items: center;
+}
+@media only screen and (max-width: 1024px){
+    header{
+        height: 20vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "logo_total lista_header"
+                             "div_logo_registro div_input";
+        align-items: center;
+        div{
+            a{
+                color: map-get($color_text, "negrito_text");
+                text-decoration: none;
+                img{
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+            a:hover{
+                color: map-get($color_text, "blanco_text");
+            }
+        }
+        .input_header{
+            background-color: map-get($color_page,"negrito_claro");
+            color: map-get($color_text,"blanco_text");
+            height: 30px;
+            width: 250px;
+            font-size: 15px;
+            font-family: roboto, sans-serif;
+            font-weight: bold;
+            border: none;
+            border-radius: 1.5rem
+        }
+        ul{
+            grid-area: lista_header;
+            margin-left: auto;
+            margin-right: auto;
+            li{
+                @include lista_horizontal;
+                margin: 0.5rem;
+                a{
+                    color: map-get($color_text , "negrito_text" );
+                    text-decoration: none;
+                }
+                a:hover{
+                    color: map-get($color_text , "blanco_text" );
+                }
+            }
+        }
+    }
+    .logo_total{
+        grid-area: logo_total;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .div_input{
+        grid-area: div_input;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .div_logo_registro{
+        grid-area: div_logo_registro;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media only screen and (max-width: 600px){
+    header{
+        height: 25vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "logo_total div_logo_registro"
+                             "lista_header lista_header"
+                             "div_input div_input";
+        align-items: center;
+        div{
+            a{
+                color: map-get($color_text, "negrito_text");
+                text-decoration: none;
+                img{
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+            a:hover{
+                color: map-get($color_text, "blanco_text");
+            }
+        }
+        .input_header{
+            background-color: map-get($color_page,"negrito_claro");
+            color: map-get($color_text,"blanco_text");
+            height: 30px;
+            width: 250px;
+            font-size: 15px;
+            font-family: roboto, sans-serif;
+            font-weight: bold;
+            border: none;
+            border-radius: 1.5rem
+        }
+        ul{
+            grid-area: lista_header;
+            margin-left: auto;
+            margin-right: auto;
+            li{
+                @include lista_horizontal;
+                margin: 0.5rem;
+                a{
+                    color: map-get($color_text , "negrito_text" );
+                    text-decoration: none;
+                }
+                a:hover{
+                    color: map-get($color_text , "blanco_text" );
+                }
+            }
+        }
+    }
+    .logo_total{
+        grid-area: logo_total;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .div_input{
+        grid-area: div_input;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .div_logo_registro{
+        grid-area: div_logo_registro;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

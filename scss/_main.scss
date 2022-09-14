@@ -15,9 +15,9 @@ main{
             a{
                 text-decoration: none;
                 color: map-get($color_text , "rosita_text");
-            }
-            a:hover{
-                color: map-get($color_text , "blanco_text");
+                &:hover{
+                    color: map-get($color_text , "blanco_text");
+                }
             }
         }
     }
@@ -42,13 +42,110 @@ main{
 }
 .contenido_banner{
     margin-top: 4rem;
+    h3{
+        text-align: center;
+        color: map-get($color_text , "blanco_text");
+    }
     ul{
         li{
             @include lista_vertical;
             margin-top: 3rem;
-            h3{
-                color: map-get($color_text , "blanco_text");
+        }
+    }
+}
+#main_contacto{
+    @include main_formuario;
+}
+#main_registro{
+    @include main_formuario;
+    a{
+        color: map-get($color_text ,"blanco_text");
+        &:hover{
+            color: map-get($color_text ,"negrito_text");
+        }
+    }
+}
+#main_tyc{
+    @include main_tyc;
+}
+.texto_contacto{
+    margin: 0.5rem;
+    color: map-get($color_text ,"blanco_text");
+}
+.input_contacto{
+    margin: 1.5rem;
+    height: 2rem;
+    border: 2px solid map-get($color_page,"rosita");
+    border-radius: 1.5rem;
+    color: map-get($color_text,"blanco_text");
+    background-color: map-get($color_page,"negrito_claro");
+}
+.input_mensaje_contacto{
+    margin: 1.5rem;
+    height: 15vh;
+    border: 2px solid map-get($color_page,"rosita");
+    border-radius: 1.5rem;
+    color: map-get($color_text,"blanco_text");
+    background-color: map-get($color_page,"negrito_claro");
+}
+.button_contacto{
+    margin: 1.5rem;
+    height: 2rem;
+    color: map-get($color_text,"blanco_text");
+    border-radius: 1.5rem;
+    border: none;
+    background-color: map-get($color_page,"rosita");
+}
+@media only screen and (max-width: 1024px){
+    #main_contacto{
+        @include main_formuario;
+        section{
+            height: 75vh;
+            width: 60;
+        }
+    }
+    #main_registro{
+        @include main_formuario;
+        section{
+            height: 75vh;
+            width: 60;
+        }
+    }
+
+}
+@media only screen and (max-width: 600px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 0.5fr;
+    }
+    .contenido_banner{
+        margin-top: 2rem;
+        ul{
+            li{
+                @include lista_horizontal;
+                margin: 1rem;
             }
+        }
+    }
+    #main_contacto{
+        @include main_formuario;
+        section{
+            height: 75vh;
+            width: 60;
+        }
+    }
+    #main_registro{
+        @include main_formuario;
+        section{
+            height: 75vh;
+            width: 60;
+        }
+    }
+    #main_tyc{
+        height: 130vh;
+        .contenido_tyc{
+            margin: 1.5rem;
         }
     }
 }

@@ -11,3 +11,36 @@
     display: flex;
     justify-content: space-around;
 }
+@mixin main_formuario {
+    height: 100vh;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    section{
+        height: 90vh;
+        width: 70vh;
+        border-radius: 1.5rem;
+        background-color: map-get($color_page,"negrito_claro");
+        flex-direction: column;
+        display: flex;
+        text-align: center;
+    }
+}
+@mixin main_tyc {
+    height: 100vh;
+    div{
+        margin-left: 2rem;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-around;
+        h1,h2,p{
+            color: map-get($color_text,"blanco_text");
+        }
+        a{
+            color: map-get($color_text,"rosita_text");
+            &:hover{
+                color: map-get($color_text,"blanco_text");
+            }
+        }
+    }
+}
